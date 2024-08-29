@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "This is backend of the TODO project build on PERN Stack",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shikharg1110/PostgreSQL-project-TODO.git"
+  },
+  "author": "Shikhar Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shikharg1110/PostgreSQL-project-TODO/issues"
+  },
+  "homepage": "https://github.com/shikharg1110/PostgreSQL-project-TODO#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "pg": "^8.12.0"
+  }
+}
