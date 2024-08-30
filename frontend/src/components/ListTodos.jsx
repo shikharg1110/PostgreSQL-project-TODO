@@ -7,7 +7,8 @@ const ListTodos = () => {
 
     const deleteTodo = async(id) => {
         try {
-            const deleteTodo = await fetch(`http://localhost:5000/todos/${id}`, {
+            // const deleteTodo = await fetch(`http://localhost:5000/todos/${id}`, {
+            const deleteTodo = await fetch(`${import.meta.env.VITE_URL}/${id}`, {
                 method: "DELETE"
             });
 
@@ -19,7 +20,7 @@ const ListTodos = () => {
     
     const getTodos = async () => {
         try {
-            const response = await fetch('http://localhost:5000/todos');
+            const response = await fetch(import.meta.env.VITE_URL);
             const jsonData = await response.json();
             setTodos(jsonData);
         } catch (error) {
@@ -43,12 +44,7 @@ const ListTodos = () => {
                 </tr>
             </thead>
             <tbody>
-                {/* <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr> */}
+                
                 {
                     todos.map((todo, index) => (
                         <tr key={todo.todo_id}>
